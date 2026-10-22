@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data: https://*.goatcounter.com; media-src 'self' blob:; connect-src 'self' https://*.goatcounter.com; base-uri 'self'; form-action 'none'">
+<title>RDweeb // Settings</title>
+<meta name="description" content="Change colours, effects, accessibility options and language. Saved on this device.">
+<meta name="theme-color" content="#07060c">
+<meta property="og:title" content="RDweeb // Settings">
+<meta property="og:description" content="Change colours, effects, accessibility options and language. Saved on this device.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://rdweeb.xyz/settings">
+<meta property="og:image" content="https://rdweeb.xyz/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="icons/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/fx.css">
+<script src="js/boot.js"></script>
+<script type="module" src="js/main.js"></script>
+</head>
+<body>
+<a class="skip" href="#view" data-i18n="a11y.skip">Skip to content</a>
+<canvas id="scene" aria-hidden="true"></canvas>
+<div class="veil" aria-hidden="true"></div>
+<div id="whispers" aria-hidden="true"></div>
+<header class="top">
+  <a class="brand" href="index.html" aria-label="RDweeb">
+    <svg class="brand-mark" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M4 12h16M12 3c3.5 3 3.5 15 0 18M12 3c-3.5 3-3.5 15 0 18"/></svg>
+    <span>RDWEEB</span>
+  </a>
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu" data-i18n-aria="nav.menu" aria-label="Menu"><span></span><span></span><span></span></button>
+  <div class="menu" id="menu">
+    <nav aria-label="Main" data-i18n-aria="nav.label">
+      <a href="index.html" data-nav="home"><i>01</i><span data-i18n="nav.home">Home</span></a>
+      <a href="portfolio.html" data-nav="portfolio"><i>02</i><span data-i18n="nav.portfolio">Portfolio</span></a>
+      <a href="services.html" data-nav="services"><i>03</i><span data-i18n="nav.services">Services</span></a>
+      <a href="contact.html" data-nav="contact"><i>04</i><span data-i18n="nav.contact">Contact</span></a>
+      <a href="support.html" data-nav="support"><i>05</i><span data-i18n="nav.support">Support</span></a>
+      <a href="settings.html" data-nav="settings"><i>06</i><span data-i18n="nav.settings">Settings</span></a>
+      <a href="credits.html" data-nav="credits"><i>07</i><span data-i18n="nav.credits">Credits</span></a>
+    </nav>
+    <div class="lang" role="group" aria-label="Language" data-i18n-aria="nav.language">
+      <button type="button" data-lang="en" lang="en">EN</button>
+      <button type="button" data-lang="ru" lang="ru">RU</button>
+      <button type="button" data-lang="de" lang="de">DE</button>
+    </div>
+  </div>
+</header>
+<main id="view" data-page="settings" tabindex="-1">
+<header class="page-head">
+  <p class="chip" data-i18n="settings.chip"></p>
+  <h1 class="mega" data-i18n="nav.settings" data-scramble></h1>
+  <p class="lead" data-i18n="settings.lead"></p>
+</header>
+<section class="block" id="presets-block">
+  <h2 class="h2"><span class="num">01</span><span data-i18n="settings.presets"></span></h2>
+  <div class="presets" id="presets"></div>
+</section>
+<div id="groups"></div>
+<section class="block">
+  <h2 class="h2"><span class="num">+</span><span data-i18n="settings.share"></span></h2>
+  <p class="prose" data-i18n="settings.share.p"></p>
+  <label for="code" data-i18n="settings.code"></label>
+  <textarea id="code" rows="3" spellcheck="false"></textarea>
+  <div class="cta">
+    <button class="btn" type="button" id="code-copy" data-i18n="settings.code.copy"></button>
+    <button class="btn" type="button" id="code-load" data-i18n="settings.code.load"></button>
+    <button class="btn danger" type="button" id="reset" data-i18n="settings.reset"></button>
+  </div>
+  <p class="small" id="set-status" role="status"></p>
+</section>
+</main>
+<footer class="foot">
+  <div class="foot-row">
+    <p class="foot-note" data-i18n="foot.note">Made by hand in plain HTML, CSS and JavaScript.</p>
+    <a class="btn ghost" id="gh-all" href="https://github.com/rdweeb?tab=repositories" target="_blank" rel="noopener" data-i18n="foot.github">All my GitHub projects and archives</a>
+  </div>
+  <div class="foot-row small">
+    <span>&copy; 2026 RDweeb</span>
+    <span><span data-i18n="foot.visits">Visits</span>: <b id="visits">...</b></span>
+    <a href="credits.html" data-i18n="nav.credits">Credits</a>
+    <a href="settings.html" data-i18n="nav.settings">Settings</a>
+  </div>
+</footer>
+<noscript><p class="msg" data-i18n="a11y.nojs">This site needs JavaScript for most of its features. The text is still readable, links open the normal pages.</p></noscript>
+</body>
+</html>
